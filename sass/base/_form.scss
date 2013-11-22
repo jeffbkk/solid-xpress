@@ -1,0 +1,84 @@
+form {
+    @include clearfix;
+    margin-top: 2.5em;}
+
+fieldset {
+    width: 100%;
+	border:none;}
+
+label {
+    display:none;}
+
+#{$all-text-inputs},
+input[type="submit"],
+textarea { 
+    width: 100%;
+    outline:none;
+    @include transition ( all .18s linear );
+    font-size: 1em;
+    border:1px solid transparent;
+    margin: 0 0 em(50);
+    background:$white;
+    padding: 0.875em  1.125em;
+    // border:5px solid darken($color-wrapper, 4%);
+    @include box-shadow(  0 0 1px 5px darken($color-wrapper,  1%));
+    color:$black;
+    @include placeholder { color: lighten($grey, 22%); font-weight: 700; font-style: italic; };
+ }
+
+ input[type="submit"] {
+    background:$red;
+    cursor:pointer;
+    color:$white;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 1.125em 2.5em; 
+   }
+
+ textarea {
+   min-height: 250px;
+   height: 250px;
+}
+
+
+ #{$all-text-inputs-hover},
+ #{$all-text-inputs-focus},
+ textarea:hover,
+ textarea:focus { 
+    border-color: darken($color-wrapper, 9%);
+    @include box-shadow(  0 0 1px 5px darken($color-wrapper,  3%));
+     outline:none;
+  }
+@include media( $tab ) {
+    
+    fieldset {
+        float:left;
+        width: 47.5%;
+        margin: 0 5% 0 0;
+        &:nth-child(2) { margin-right: 0;}
+        &:nth-child(3){
+            float:none;
+            margin: 0;
+            width: 100%;}
+    }
+
+    input[type="submit"] {
+        margin: 0 auto;
+        width: 184px;
+    }
+}
+
+
+@include media( $desk ) {
+   
+   label {
+     color:$red;
+     margin-bottom: .875em;
+     display: block;}
+   
+   input[type="submit"] {
+    width: auto;}
+
+
+}
+

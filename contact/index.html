@@ -1,0 +1,64 @@
+---
+title: contact
+option: false
+layout: default
+description: contact SolidXpress formulaire de contact
+location:
+  address: 8 Av Georges Clemenceau Cosnes-cour Sur Loire
+  latitude: 47.40875
+  longitude: 2.924794
+---
+
+{% if page.option == true %}
+  {% include title-page.html %}
+{% endif %}
+
+<section class ="mapping">
+	<div class ="map-canvas" id ="map-event"></div>
+
+	<div class ="map-point" address ="{{ page.location.address }}" lat ="{{ page.location.latitude }}" long ="{{ page.location.longitude }}">
+	   <div class ="description"><b>{{ site.name }}</b></div>
+	   <div> {{ page.location.address }}</div>
+	</div>
+
+</section>
+
+<section class="container-4-8">
+	<div class="container">
+		
+		<div class="grid-4">
+			<h2>adresse</h2>
+		</div>
+
+		<div class="grid-8">
+			<h2>formulaire de contact</h2>
+
+			<form action="/" method ="post">
+				<fieldset>
+					<label for="nom">Votre nom</label>
+					<input type="text" name="nom" id="nom" placeholder="Votre nom" required>
+
+					<label for="nom">Votre email</label>
+					<input type="email" name="email" id="email" placeholder="Votre email" required>
+				</fieldset>
+
+				<fieldset>
+					<label for="nom">Votre telephone</label>
+					<input type="text" name="phone" id="phone" placeholder="Votre telephone">
+
+					<label for="nom">Budget</label>
+					<input type="text" name="budget" id="budget" placeholder ="Euros" maxlength="5">
+				</fieldset>
+
+				<fieldset>
+					<label for="message">Votre message</label>
+					<textarea name="message" id="message" required placeholder ="Votre message"></textarea>
+				</fieldset>
+
+				<input type="submit" value="Envoyer">
+			</form>
+		</div>
+
+	</div>
+</section>
+

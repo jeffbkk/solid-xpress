@@ -1,0 +1,35 @@
+---
+title: Blog Welcome to my blog
+layout: default
+---
+
+<section id="blog">
+
+<div class="container">
+
+<div class="grid-9">
+	{% if posts %}
+	  <ol>
+	     {% for post in site.posts %}
+	       <li>
+	       	<h1><a href="{{ post.url }}" title ="{{ post.title }}"></a></h1>
+	       	{% if post.excerpt %}
+	       	     {{ post.excerpt }}
+	       	{% endif %}
+	       </li>   
+	     {% endfor %}
+	  </ol>
+	  {% else %}
+	  <p>
+	  	No entry were found at the moment
+	  </p>
+	{% endif %}
+</div>
+
+<aside class="grid-3">
+	{% include sidebar.html %}
+</aside>
+
+</div>
+
+</section>

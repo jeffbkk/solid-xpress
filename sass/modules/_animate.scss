@@ -1,0 +1,74 @@
+#wrapper {
+	@include transition ( all .25s linear );
+    
+    @include media( $tab) {
+          @include animation( none );
+    }
+}
+
+nav a,
+.contact a,
+.credit a,
+[role="banner"],
+nav li a:before,
+.social a:before {
+	@include transition ( all .18s linear );
+}
+
+#sub-menu-main,
+#sub-menu-side {
+
+    @include transition ( all .18s linear );
+
+    @include media( $desk ) {
+
+		@include transition ( none );
+		@include transition ( opacity .18s linear );
+
+    }
+
+}
+
+
+
+
+#wrapper.open-nav,
+footer.open-nav {
+	@include transform( translateX(80%) );
+
+	@include media( $tab )  {
+		@include transform( translateX(0) );
+		@include animation( none );
+	}
+}
+
+
+// /*---------------------------------------------
+
+//    SUB NAVIGATION DES MENU
+
+// --------------------------------------------------*/
+
+#sub-menu-main.open,
+#sub-menu-side.open {
+	opacity:1;
+	height: 195px;}
+
+$items: 7;
+$delay: 160ms;
+
+@for $i from 1 to 7 {
+	
+	#wrapper.open-nav nav li:nth-child(#{$i}) a {
+         @include animation( fadeInLeft .22s ease-out forwards );
+         @include animation-delay( $delay*$i );
+	}
+
+	@include keyframes( fadeInLeft ) {
+          
+          0% { opacity:0; @include transform( translateX(-40px) );}
+          100% { opacity:1; @include transform( translateX(0px) );}
+	}
+
+}
+

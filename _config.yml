@@ -1,0 +1,49 @@
+name: "Solidxpress"
+description: "Solidxpress"
+
+url: "http://localhost:4000"
+
+paginate: 10
+
+markdown: rdiscount
+permalink: pretty
+
+social: 
+  - label: facebook
+    title: Facebook
+    url: http://facebook.com?
+    data-icon: 62221;
+  - label: linkedin
+    title: linkedin
+    url: http://linkedin.com?
+    data-icon: 62233;
+  - label: pinterest
+    title: pinterest
+    url: http://pinterest.com?
+    data-icon: 62227;
+
+
+menus:
+    main:
+    - Home: /
+    - Services:
+        - /services/
+        - Prototypage rapide: /services/prototypage-rapide
+        - Scan 3d: /services/scan-3d
+        - Fraisage numerique: /services/fraisage-numerique
+    - Gallerie: /gallerie
+    - A propos: /a-propos
+    - Contact: /contact
+    - blog: /blog
+    side:
+    - Home: /
+    - Services:
+        - /services/
+        - Prototypage rapide: /services/prototypage-rapide
+        - Scan 3d: /services/scan-3d
+        - Fraisage numerique: /services/fraisage-numerique
+    - Gallerie: /gallerie
+    - A propos: /a-propos
+    - Contact: /contact
+    - blog: /blog
+

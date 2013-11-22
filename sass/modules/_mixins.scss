@@ -1,0 +1,21 @@
+/*--- MIXIN FOR PREFEVENTING---------
+      TOUCH-CALLOUT
+      TEXT-SIZE-ADJUST
+----------------------------------*/
+
+@mixin touch-callout($arg: none) {
+  @include prefixer(touch-callout, $arg, webkit moz ms spec);
+}
+
+@mixin text-size-adjust($arg: none) {
+  @include prefixer(text-size-adjust, $arg, webkit moz ms spec);
+}
+
+/*-----omega reset------------*/
+
+@mixin omega-reset($nth, $num){
+            &:nth-child(2n) { margin-right: flex-gutter($num);}
+            &:nth-child(#{$nth}) {clear:none;}
+}
+
+

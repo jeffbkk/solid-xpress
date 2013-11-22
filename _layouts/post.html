@@ -1,0 +1,32 @@
+{% include header.html %}
+
+
+<section id="articles">
+	
+   <div class="container">
+
+        <div class="grid-9">
+        	   
+        	   <h1>{{ page.title }}</h1>
+        	       <p class="muted">{{ page.date | date_to_long_string }}</p>
+
+        	   <article class ="single-article">
+                    
+                    {{ content }}  	   	
+      
+        	   </article>
+
+        </div>
+
+        <div class="grid-3">
+          
+          {% include sidebar.html %}
+
+        </div>
+
+   </div>
+
+</section>
+
+
+{% include footer.html }

@@ -1,0 +1,133 @@
+[role="banner"],
+footer,
+section {
+	width: 100%;
+	clear:both;
+	overflow: hidden;
+}
+
+#mask {
+  display: none;
+  height: 601px;}
+
+.container {
+	@include outer-container;
+	width: 92%;
+	margin: 0 auto;
+
+	@include media( $desk ) {
+		width: 100%;
+		margin: auto;
+	}
+}
+
+.mapping .map-canvas{
+	@include transition ( all .25s ease-in-out );
+	padding-top: 66.5%;
+	width: 100%;
+
+	@include media( $tab ) {
+		padding-top: 48.5%;
+	}
+
+	@include media( $desk ){
+       padding-top: 29.5%;
+
+	}
+}
+
+#wrapper {
+	width: 100%;
+	height: 100%;
+	z-index: 800;
+	position: relative;}
+
+
+section,
+footer {
+	padding: em(40) 0;
+    @include media( $desk ) {
+    	padding: em(60) 0;
+    }
+}
+
+footer,
+.mapping,
+#slideshow {
+	padding-top: 0;}
+
+
+.grid-3,
+.grid-4,
+.grid-6,
+.grid-7,
+.grid-8,
+.grid-9,
+.grid-12 {
+
+    width: 100%;}
+
+ @include media( $tab ) {
+     
+     .grid-3 {
+     	@include span-columns( 4,8 );
+     	@include omega( 3n );
+     }
+
+ }
+
+
+
+@include media( $desk ) {
+
+    section,
+    footer {
+    	padding:em(60) 0;}
+
+    footer .container + .container {
+    	padding: em(60) 0 0 0;
+    }
+
+	#mask {
+     display: block;}
+
+	[role="banner"] {
+		padding: 0 0 em(60);
+
+		.container { position: relative;}
+
+		nav {
+			position: absolute;
+			top:50%;
+			margin-top: -14px;
+			display: table;
+			vertical-align: middle;
+			right:4%;
+		}
+	}
+
+	.container { width: 92%; }
+
+	.grid-3 {
+		@include span-columns( 3,12 );}
+    
+    .grid-4 {
+    	@include span-columns( 4,12 );}
+
+    .grid-5 {
+    	@include span-columns( 5,12 );}
+    
+    .grid-6 {
+    	@include span-columns( 6,12 );}
+
+    .grid-7 {
+    	@include span-columns( 7,12 );}
+
+    .grid-8 {
+    	@include span-columns( 8,12 );}
+
+    .grid-9 {
+    	@include span-columns( 9,12 ); }
+
+}
+

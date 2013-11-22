@@ -1,0 +1,12 @@
+<h2>Derniers articles</h2>
+<div>
+{% if posts %}
+	{% for post in site.posts | limit:3 %}
+	     <h3><a href="{{ post.url }}" title ="{{ post.title }}">{{ post.title }}</a></h3>
+	{% endfor %}
+{% else %}
+   <p> Nothing were found </p>
+{% endif %}
+</div>
+
+<h2>Archives</h2>
