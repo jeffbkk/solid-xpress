@@ -5,28 +5,52 @@
 	
    <div class="container">
 
-        <div class="grid-9">
+        <div class="grid-8">
         	   
-        	   <h1>{{ page.title }}</h1>
-        	       <p class="muted">{{ page.date | date_to_long_string }}</p>
-
         	   <article class ="single-article">
-                    
-                    {{ content }}  	   	
+
+                  <h1>{{ page.title }}</h1>
+
+                  <p>Publie par <em>{{ page.author | capitalize }}</em></p>
+                  {% if page.image != '' %}
+                    <figure>
+                      <img src="/img/blog/3d-print-show.jpg" alt=" {{ page.alt }}">
+                      <figcaption>
+                        Photo {{ page.author | capitalize }}
+                      </figcaption> 
+                    </figure>
+                  {% endif %}
+
+                  <div class="article-main">
+                       
+                       {{ content }}  
+
+                       <p>
+                         Postee le <time>{{ page.date | date_to_long_string }}</time>
+                       </p>
+                       
+                        <ul class ="share">
+                           <li><a href="{{ post.url }}">Pinterest</a></li>
+                           <li><a href="http://www.facebook.com/sharer.php?u{{ post.url }}">Facebook</a></li>
+                           <li><a href="'https://plusone.google.com/_/+1/confirm?hl=en&url=' + '{{ post.url }}'">Google+</a></li>
+                        </ul>
+
+                  </div>
       
         	   </article>
 
+             
         </div>
 
-        <div class="grid-3">
+        <aside class="grid-4">
           
           {% include sidebar.html %}
 
-        </div>
+        </aside>
 
    </div>
 
 </section>
 
 
-{% include footer.html }
+{% include footer.html %}

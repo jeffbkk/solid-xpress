@@ -1,20 +1,20 @@
 [role="banner"]{
 	text-align: center;
+	padding: 0;
     height: auto;}
 
 #sub-menu-main {
 	display:none;}
 
 #logo {
-	padding: 1em;
-	text-align: center;
+	// width: 300px;
+	margin: 0 auto;
 	display:block;
 	a {
-		background-size: 60% auto;
-		background-position: 50% 50%;
-		
-	}
-	}
+		display: inline-block;
+		background-position: 0 0;
+		@include retina-image(logo-2x, 528px, 94px );}
+}
 
 nav {
 	margin: 0 auto;

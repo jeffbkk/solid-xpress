@@ -20,5 +20,5 @@ $fg-column:$column;
 
 
 $mobile:new-breakpoint( min-width 320px 4);
-$tab: new-breakpoint( min-width 760px 8 );
+$tab: new-breakpoint( min-width 720px 8 );
 $desk: new-breakpoint(min-width 860px 12);

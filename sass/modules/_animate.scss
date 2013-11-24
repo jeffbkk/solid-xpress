@@ -33,7 +33,7 @@ nav li a:before,
 
 
 #wrapper.open-nav,
-footer.open-nav {
+[role="contentinfo"].open-nav {
 	@include transform( translateX(80%) );
 
 	@include media( $tab )  {

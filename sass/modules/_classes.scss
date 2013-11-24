@@ -3,6 +3,12 @@
 	padding: 0 0 .25em;
 	border-bottom:1px dotted $red;}
 
+.rt {
+  width: flex-grid( 3,12 );
+  float:right;
+  margin-right: 0;
+  margin-left: 0;}
+
 p.credit {
 	padding: 0 4%;
 	font-size: .875em;}

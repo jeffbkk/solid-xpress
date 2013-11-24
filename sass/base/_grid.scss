@@ -1,5 +1,5 @@
 [role="banner"],
-footer,
+[role="contentinfo"],
 section {
 	width: 100%;
 	clear:both;
@@ -44,14 +44,14 @@ section {
 
 
 section,
-footer {
+[role="contentinfo"] {
 	padding: em(40) 0;
     @include media( $desk ) {
     	padding: em(60) 0;
     }
 }
 
-footer,
+[role="contentinfo"],
 .mapping,
 #slideshow {
 	padding-top: 0;}
@@ -81,7 +81,7 @@ footer,
 @include media( $desk ) {
 
     section,
-    footer {
+    [role="contentinfo"] {
     	padding:em(60) 0;}
 
     footer .container + .container {
@@ -96,14 +96,7 @@ footer,
 
 		.container { position: relative;}
 
-		nav {
-			position: absolute;
-			top:50%;
-			margin-top: -14px;
-			display: table;
-			vertical-align: middle;
-			right:4%;
-		}
+		
 	}
 
 	.container { width: 92%; }
