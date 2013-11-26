@@ -39,6 +39,7 @@ footer .container {
 -------------------------------------------------------------*/
 [role="banner"] {
   padding: .75em 0;
+  height: 72px;
   nav {
     position: absolute;
     top:0;
@@ -60,16 +61,15 @@ footer .container {
   opacity: 0;}
 
 #logo {
-  line-height: 72px;
   margin-right: 4%;
-  width: 264px;
-  height: 47px;
-  float:right;
+  position: absolute;
+  right:0;
+  top:0;
   a {
-     @include retina-image(logo, 264px, 47px );
+     @include retina-image(logo-m, 72px, 75px );
      background-repeat: no-repeat;
      background-position: 100% 50%;
-     background-size: 264px 47px; }
+     background-size: 65% auto; }
 }
 
 #toggle-wrapper {

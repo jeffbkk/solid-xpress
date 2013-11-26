@@ -19,6 +19,11 @@
     color:$red;
 }
 
+::selection {
+    background:transparent;
+    color:$red;
+}
+
 @import url(http://weloveiconfonts.com/api/?family=entypo);
 
 /* entypo */

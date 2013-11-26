@@ -1,7 +1,14 @@
 {% include header.html %}
 
+<section class="title-page">
+  <div class="container">
+    <div class="row">
+      <h1>Le Blog</h1>
+    </div>
+  </div>
+</section>
 
-<section id="articles">
+<section class="articles">
 	
    <div class="container">
 
@@ -10,8 +17,10 @@
         	   <article class ="single-article">
 
                   <h1>{{ page.title }}</h1>
-
-                  <p>Publie par <em>{{ page.author | capitalize }}</em></p>
+                  <p>
+                    Postee le <time>{{ page.date | date_to_long_string }}</time> par <em>{{ page.author | capitalize }}</em>
+                  </p>
+                  
                   {% if page.image != '' %}
                     <figure>
                       <img src="/img/blog/3d-print-show.jpg" alt=" {{ page.alt }}">
@@ -25,10 +34,6 @@
                        
                        {{ content }}  
 
-                       <p>
-                         Postee le <time>{{ page.date | date_to_long_string }}</time>
-                       </p>
-                       
                         <ul class ="share">
                            <li><a href="{{ post.url }}">Pinterest</a></li>
                            <li><a href="http://www.facebook.com/sharer.php?u{{ post.url }}">Facebook</a></li>

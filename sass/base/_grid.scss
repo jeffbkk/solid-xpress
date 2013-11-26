@@ -62,6 +62,7 @@ section,
 .grid-6,
 .grid-7,
 .grid-8,
+.grid-8-shift-2,
 .grid-9,
 .grid-12 {
 
@@ -118,6 +119,11 @@ section,
 
     .grid-8 {
     	@include span-columns( 8,12 );}
+
+    .grid-8-shift-2 {
+    	@include span-columns( 8,12 );
+    	@include shift( 2 );
+    }
 
     .grid-9 {
     	@include span-columns( 9,12 ); }

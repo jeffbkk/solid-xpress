@@ -3,27 +3,41 @@ title: Blog Welcome to my blog
 layout: default
 ---
 
+<section class="title-page">
+	<div class="container">
+		<div class="row">
+			<h1>Le Blog</h1>
+		</div>
+	</div>
+</section>
+
 <section id="blog">
 
 <div class="container">
 
 <div class="grid-8">
-	{% if posts %}
-	  <ol>
+    <div class="post-index">
+    	 <ol>
 	     {% for post in site.posts %}
 	       <li>
-	       	<h1><a href="{{ post.url }}" title ="{{ post.title }}"></a></h1>
-	       	{% if post.excerpt %}
-	       	     {{ post.excerpt }}
-	       	{% endif %}
+	       {% if post.img == true %}
+	            <img src="/img/figure.jpg" alt="" class ="left-crop">
+	       {% endif %}
+	          <div class="info">
+	          	  <p class="meta">
+	          	   <time>{{ post.date | date_to_long_string }}</time>
+	             </p>
+	          	  <h1><a href="{{ post.url }}" title ="{{ post.title }}">{{ post.title }}</a></h1>
+	               {% if post.excerpt %}
+	                    {{ post.excerpt }}
+	               {% endif %}
+	          </div>
+	          <a href="{{ post.url }}" class ="more" data-icon ="&#59234;" data-aria ="hidden" >En savoir plus</a>
 	       </li>   
 	     {% endfor %}
 	  </ol>
-	  {% else %}
-	  <p>
-	  	No entry were found at the moment
-	  </p>
-	{% endif %}
+    </div>
+	 
 </div>
 
 <aside class="grid-4">

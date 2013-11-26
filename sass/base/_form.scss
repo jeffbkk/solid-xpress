@@ -21,7 +21,7 @@ textarea {
     background:$white;
     padding: 0.875em  1.125em;
     // border:5px solid darken($color-wrapper, 4%);
-    @include box-shadow(  0 0 1px 5px darken($color-wrapper,  1%));
+    // @include box-shadow(  0 0 1px 5px darken($color-wrapper,  1%));
     color:$black;
     @include placeholder { color: lighten($grey, 22%); font-weight: 700; font-style: italic; };
  }

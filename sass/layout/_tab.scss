@@ -7,7 +7,6 @@
 	display:none;}
 
 #logo {
-	// width: 300px;
 	margin: 0 auto;
 	display:block;
 	a {
@@ -17,12 +16,12 @@
 }
 
 nav {
-	margin: 0 auto;
 	position: relative;
-	float:right;
+	width: 84%;
+	@include display-box;
+    @include box-orient( horizontal );
 	li {
-		display:inline;
-		float:left;
+		@include box-flex( 1.0 );
 	}
 
 }

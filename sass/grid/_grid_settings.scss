@@ -1,16 +1,16 @@
 
 @import "neat/neat-helpers";
 
-$visual-grid:false;
-$visual-grid-color:rgb(255,0,0);
+$visual-grid:true;
+$visual-grid-color:rgb(0,255,255);
 $visual-grid-index:back;
 
 $border-box-sizing:true;
 
 $column:75;
-$gutter:35;
+$gutter:40;
 $grid-columns:4;
-$max-width:em(1120);
+$max-width:em(1225);
 
 // Bourbon is watch Neat
 
