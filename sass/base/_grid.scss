@@ -1,4 +1,5 @@
 [role="banner"],
+footer,
 [role="contentinfo"],
 section {
 	width: 100%;
@@ -6,13 +7,20 @@ section {
 	overflow: hidden;
 }
 
+.row {
+    padding: 1em 0;}
+
+footer {
+  position: relative;}
+
 #mask {
   display: none;
   height: 601px;}
 
 .container {
 	@include outer-container;
-	width: 92%;
+  max-width:1140px;
+	width: 88%;
 	margin: 0 auto;
 
 	@include media( $desk ) {
@@ -21,37 +29,36 @@ section {
 	}
 }
 
-.mapping .map-canvas{
+.mapping .map-canvas {
 	@include transition ( all .25s ease-in-out );
 	padding-top: 66.5%;
+  margin-bottom: 2.5em;
 	width: 100%;
 
 	@include media( $tab ) {
-		padding-top: 48.5%;
-	}
+		padding-top: 48.5%;}
 
 	@include media( $desk ){
-       padding-top: 29.5%;
-
-	}
+       padding-top: 89.5%; }
 }
+
+ .mapping-adress,
+ .descriptiom {
+       display: none;
+  }
 
 #wrapper {
 	width: 100%;
-	height: 100%;
-	z-index: 800;
-	position: relative;}
+  position: relative;
+  z-index: 800;
+	height: 100%;}
 
 
 section,
 [role="contentinfo"] {
-	padding: em(40) 0;
-    @include media( $desk ) {
-    	padding: em(60) 0;
-    }
+	padding: 2.5em 0;
 }
 
-[role="contentinfo"],
 .mapping,
 #slideshow {
 	padding-top: 0;}
@@ -63,6 +70,7 @@ section,
 .grid-7,
 .grid-8,
 .grid-8-shift-2,
+.grid-8-shift-10,
 .grid-9,
 .grid-12 {
 
@@ -81,24 +89,10 @@ section,
 
 @include media( $desk ) {
 
-    section,
-    [role="contentinfo"] {
-    	padding:em(60) 0;}
-
-    footer .container + .container {
-    	padding: em(60) 0 0 0;
-    }
-
 	#mask {
      display: block;}
 
-	[role="banner"] {
-		padding: 0 0 em(60);
-
-		.container { position: relative;}
-
-		
-	}
+	[role="banner"] .container { position: relative;}
 
 	.container { width: 92%; }
 
@@ -122,11 +116,24 @@ section,
 
     .grid-8-shift-2 {
     	@include span-columns( 8,12 );
-    	@include shift( 2 );
-    }
+    	@include shift( 2 );}
+
+    .grid-10-shift-1 {
+      @include span-columns( 10,12 );
+      padding: 0 0 2.5em 0;
+      @include shift( 1 );}
+
+     .grid-6-shift-3 {
+      @include span-columns( 6,12 );
+      @include shift( 3 );}
 
     .grid-9 {
     	@include span-columns( 9,12 ); }
+
+    .grid-12 {
+      padding: 0;
+      @include span-columns( 12,12 );
+    }
 
 }
 

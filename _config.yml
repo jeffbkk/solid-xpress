@@ -25,25 +25,15 @@ social:
 
 menus:
     main:
-    - Home: /
+    - Accueil: /
     - Services:
         - /services/
         - Prototypage rapide: /services/prototypage-rapide
         - Scan 3d: /services/scan-3d
         - Fraisage numerique: /services/fraisage-numerique
     - Gallerie: /gallerie
-    - A propos: /a-propos
+    - Faq: /faq
     - Contact: /contact
     - blog: /blog
-    side:
-    - Home: /
-    - Services:
-        - /services/
-        - Prototypage rapide: /services/prototypage-rapide
-        - Scan 3d: /services/scan-3d
-        - Fraisage numerique: /services/fraisage-numerique
-    - Gallerie: /gallerie
-    - A propos: /a-propos
-    - Contact: /contact
-    - blog: /blog
+    
 

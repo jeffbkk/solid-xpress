@@ -1,34 +1,75 @@
 /*-----Here the details -- color -- font -- hover design ----*/
 
+
+section#services img {
+    -webkit-filter: saturate(0);
+    filter: saturate(0);
+        &:hover {
+          -webkit-filter:saturate(100%);
+          filter:saturate(100%);
+        }
+}
+
+nav li a,
+ul.social a,
+ul.contact a {
+  font-family: Muli, 'Helvetica Neue', Arial,sans-serif;  
+  text-transform: capitalize;}
+
+ul.contact a {
+    text-transform: uppercase;
+    font-size: em(11);
+    color:$red;
+    letter-spacing: .05em;
+}
+
+.grid-12 {
+    padding: em(60) 0;}
+
+
 #wrapper {
    background: $color-wrapper ;
    color:$black;
-   @include box-shadow( -3px 0 8px rgba(0,0,0, 1), 3px 0 8px rgba(0,0,0, 1) );}
+   @include box-shadow( -3px 0 8px rgba(0,0,0, 1), 3px 0 8px rgba(0,0,0, 1));}
 
-[role="banner"],
-footer {
+[role="banner"] {
 	 background: $bg;
 	 color:$grey;}
 
-#call-to-action {
-     display:none;}
+footer {
+  color:$white;
+  text-shadow: 0 -1px 0 darken($red, 25%);
+  background: $bg;
+  &:before {
+        position: absolute;
+        right:-5%;
+        top:15%;
+        content:'';
+        z-index: 80;
+        width: 800px;
+        height: 600px;
+        display: block;
+        background: url(../img/type-footer.png) no-repeat;
+        background-size: 100% auto;
+        opacity:.025;
+        @include transform( rotate(45deg) );
+  }
 
-h1,h2,h3,h4 {
-	font-family: Muli, Helvetica, Arial, verdana, sans;
-	font-weight: 700;
-	text-transform: uppercase;
-	color: rgb(118,118,118);
-  font-size: 2.2em;
-	letter-spacing: .125em;}
+  a {
+     color: $white;}
+
+  .container {
+      background: url(../img/footer-logo.png);
+      background-repeat: no-repeat;}
+}
 
 [data-icon]:before {
-        position: absolute;
         content:attr(data-icon);
         display: block;
-        top:0;
+        z-index: -4;
         font-family: entypo;
         font-size: 46px;
-        color:darken($grey, 44%);}
+        color:lighten($bg, 12%); }
 
 #logo a {
      @include hide-text;

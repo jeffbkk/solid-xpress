@@ -1,7 +1,4 @@
-.external {
-	color:$red;
-	padding: 0 0 .25em;
-	border-bottom:1px dotted $red;}
+
 
 .title-page {
   @include transition ( padding .25s linear );
@@ -25,25 +22,24 @@
     }
 }
 
-.ttu {
-   text-transform: uppercase;}
+.thumb {
+   float:left;
+   margin: 0 5% 0 0;
+   border:10px solid rgba(255,255,255, .025);
+   -webkit-filter: saturate(0);
+   filter: saturate(0);
+   @include transition ( all .35s linear );
+   &:hover {
+      cursor:pointer;
+      border-color:rgba(255,255,255,.095);
+      -webkit-filter: saturate(100%);
+      filter: saturate(100%);
+   }
 
-.more {
-  font-weight: 700;
-  margin-top: 1.5em;
-  position: relative;
-  @extend .ttu;
-  border-radius:3px;
-  font-size: em(10);
-  background: $red;
-  @include transition ( background .2s ease-in-out );
-  display: inline-block;
-  padding: .75em .75em;
-  color:$white;
-  &:hover {
-      background: lighten($red, 9%);
-  }
- }
+   ~ p {
+        overflow: hidden;
+   }
+}
 
 .left-crop {
      float:left;
@@ -51,20 +47,7 @@
      width: 23%;
      margin: 0 5% 0 0;}
 
-.meta { 
-    font-size: em(10); 
-    text-transform: uppercase;
-    // font-family: Alegreya, Georgia, serif;   
-}
 
-
-.selected {
-  color:$red; }
-
-
-  .shift-2 {
-    @include span-columns( 8, 12);}
-    // @include shift(2);}
 
 .rt {
   width: flex-grid( 3,12 );
@@ -72,30 +55,17 @@
   margin-right: 0;
   margin-left: 0;}
 
-p.credit {
-	padding: 0 4%;
-	font-size: .875em;}
-
 ul.social {
-           @include display-box;
-           width:180px;
-           margin:0 auto;
-           @include box-orient( horizontal );
+           // @include display-box;
+           // width:180px;
+           // margin:0 auto;
+           // @include box-orient( horizontal );
            
            li {
-               @include box-flex( 8.0 );}
+               @include size( 36px );
+               // @include box-flex( 8.0 );}
            a {
                position: relative;
                display: inline-block;
-               margin-left: -36px;
-               @include hide-text;}
+               @include hide-text;}}
     }   
-
-@include media( $desk ) {
-   
-  p.credit {
-  	padding: 0;
-  	padding-top: 1em;
-  	border-top:1px solid darken($grey, 43%);}
-  	
-}

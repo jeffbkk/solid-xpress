@@ -13,7 +13,7 @@ location:
   {% include title-page.html %}
 {% endif %}
 
-<section class ="mapping">
+<!-- <section class ="mapping">
 	<div class ="map-canvas" id ="map-event"></div>
 
 	<div class ="map-point" address ="{{ page.location.address }}" lat ="{{ page.location.latitude }}" long ="{{ page.location.longitude }}">
@@ -21,17 +21,55 @@ location:
 	   <div> {{ page.location.address }}</div>
 	</div>
 
+</section> -->
+
+<section class="title-page">
+	<div class="container">
+	   <div class="grid-12">
+		  <h1>Contact</h1>
+	  </div>
+	</div>
 </section>
 
-<section class="container-4-8">
+<section class ="section-title">
 	<div class="container">
-		
-		<div class="grid-4">
-			<h2>adresse</h2>
-		</div>
 
-		<div class="grid-8">
-			<h2>formulaire de contact</h2>
+		<aside class="grid-5">
+			<h2>adresse</h2>
+			
+
+			<div class="vcard">
+				<address>
+				    <strong class="fn org">Solidxpress</strong><br>
+				    <ul>
+				         <li class="street-address">9 Avenue Georges Clemenceau</li>
+				         <li class="postal-code">58200</li>
+				         <li class="locality">Cosnes-Cour/Loire</li>
+				         <li class="email"><a href="mailto:webmaster@example.com">contact@solidxpress.com</a></li>
+				         <li class="tel"><a href="tel:09 50 25 00 50">  09 50 25 00 50</a></li>
+				    	 
+				    </ul>
+                  
+              </address>
+			</div>
+
+			<div class="mapping">
+
+
+	         <div class ="map-canvas" id ="map-event"></div>
+
+	              <div class ="map-point" address ="{{ page.location.address }}" lat ="{{ page.location.latitude }}" long ="{{ page.location.longitude }}">
+	              <div class ="description"><b>{{ site.name }}</b></div>
+	              <div class "mapping-adress"> {{ page.location.address }}</div>
+	         </div>
+				
+			</div>
+
+		</aside>
+   	     
+   	     <div class="grid-7">
+			<h2>Formulaire de contact</h2>
+			<p>Remplissez le formulaire ci-dessous. Nous vous repondons sous 48 heures. Promis.</p>
 
 			<form action="/" method ="post">
 				<fieldset>
@@ -47,7 +85,7 @@ location:
 					<input type="text" name="phone" id="phone" placeholder="Votre telephone">
 
 					<label for="nom">Budget</label>
-					<input type="text" name="budget" id="budget" placeholder ="Euros" maxlength="5">
+					<input type="text" name="budget" id="budget" placeholder ="Budget" maxlength="5">
 				</fieldset>
 
 				<fieldset>
@@ -59,6 +97,8 @@ location:
 			</form>
 		</div>
 
-	</div>
+
+   </div>
+	
 </section>
 

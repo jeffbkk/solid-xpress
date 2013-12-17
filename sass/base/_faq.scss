@@ -1,0 +1,17 @@
+dt { 
+	position: relative;
+	font-weight: 500;
+	&:before {
+	 content:'\002D';
+	 display:block;
+	 position: absolute;
+	 color:inherit;
+	 top:0%;
+	 left:-10px;}
+}
+
+
+address {
+	font-style: normal;
+	
+}

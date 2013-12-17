@@ -19,6 +19,27 @@
 }
 
 
+@mixin selection {
+   
+   ::-moz-selection {
+      background:transparent;
+      color:$red;}
+
+   ::-webkit-selection {
+      background:transparent;
+      color:$red;}
+
+   ::-o-selection {
+      background:transparent;
+      color:$red;}
+
+   ::selection {
+      background:transparent;
+      color:$red;}
+
+}
+
+
 /*---------------------------------------
 
 Source: 37 Signal 7 Github

@@ -1,0 +1,17 @@
+[role="banner"]{
+	text-align: center;
+	padding: 0;
+    height: auto;}
+
+#sub-menu-main {
+	display:none;}
+
+#logo {
+	margin: 0 auto;
+	display:block;
+	a {
+		display: inline-block;
+		background-position: 0 0;
+		background-size: 100% auto;
+		@include retina-image(logo-w, 528px, 94px );}
+}

@@ -5,7 +5,7 @@ layout: default
 
 <section class="title-page">
 	<div class="container">
-		<div class="row">
+		<div class="grid-12">
 			<h1>Le Blog</h1>
 		</div>
 	</div>
@@ -18,31 +18,11 @@ layout: default
 <div class="grid-8">
     <div class="post-index">
     	 <ol>
-	     {% for post in site.posts %}
-	       <li>
-	       {% if post.img == true %}
-	            <img src="/img/figure.jpg" alt="" class ="left-crop">
-	       {% endif %}
-	          <div class="info">
-	          	  <p class="meta">
-	          	   <time>{{ post.date | date_to_long_string }}</time>
-	             </p>
-	          	  <h1><a href="{{ post.url }}" title ="{{ post.title }}">{{ post.title }}</a></h1>
-	               {% if post.excerpt %}
-	                    {{ post.excerpt }}
-	               {% endif %}
-	          </div>
-	          <a href="{{ post.url }}" class ="more" data-icon ="&#59234;" data-aria ="hidden" >En savoir plus</a>
-	       </li>   
-	     {% endfor %}
-	  </ol>
+	       {% include articles.html %}
+	     </ol>
     </div>
 	 
 </div>
-
-<aside class="grid-4">
-	{% include sidebar.html %}
-</aside>
 
 </div>
 

@@ -70,13 +70,13 @@ $(document).ready ( function() {
 function initMap(canvas) {
 
   // set a default zoom unless it's specified
-  zoom = parseInt($(canvas).attr('zoom')) || 18;
+  zoom = parseInt($(canvas).attr('zoom')) || 14;
 
   // center the map and create options
   var latlng = new google.maps.LatLng(latlng);
   var myOptions = {
       center: new google.maps.LatLng(latlng),
-      zoom: 17,
+      zoom: 11,
       scrollwheel: false,
       scaleControl: false,
       mapTypeIds: [google.maps.MapTypeId.HYBRID, 'SolidXpress_map']
@@ -88,13 +88,14 @@ function initMap(canvas) {
   
   // set some custom styles
   map.set('styles', [
-    {
-      featureType: 'landscape',
-      elementType: 'all',
-      stylers: [
-        { hue: "#DE0C00"}
-      ]
-    }, {
+   {
+    featureType: 'landscape',
+    elementType: 'all',
+    stylers: [
+      { color: '#222222' },
+      { visibility: 'on' }
+    ]
+  }, {
       featureType: 'road.arterial',
       elementType: 'geometry',
       stylers: [
@@ -113,12 +114,19 @@ function initMap(canvas) {
     featureType: 'road.highway',
       elementType: 'all',
       stylers: [
-        { hue: "#DE0C00"},
-        { saturation: -70}
+        { color: "#E30922"}
+        
       ]
-    }
+    },{
+    featureType: 'water',
+    elementType: 'geometry',
+    stylers: [
+      { hue: '#254785' }
+    ]
+  }
   ]);
   
   return map;
   
 }
+

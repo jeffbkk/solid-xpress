@@ -4,25 +4,7 @@
 }
 
 
-::-moz-selection {
-    background:transparent;
-     color:$red;
-}
-
-::-webkit-selection {
-   background:transparent;
-   color:$red;
-}
-
-::-o-selection {
-    background:transparent;
-    color:$red;
-}
-
-::selection {
-    background:transparent;
-    color:$red;
-}
+@include selection;
 
 @import url(http://weloveiconfonts.com/api/?family=entypo);
 
@@ -34,7 +16,11 @@
 
 
 @import url(http://fonts.googleapis.com/css?family=Muli:300,400,300italic,400italic);
-@import url(http://fonts.googleapis.com/css?family=Alegreya:400,700);
+// @import url(http://fonts.googleapis.com/css?family=Alegreya:400,700);
+// @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,900,700,500);
+// @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800,700,600,300);
+// @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900);
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,100italic);
 
 /*--------------------------------------------------------------*/
 
@@ -58,8 +44,12 @@ img,
 audio,
 video,
 canvas {
+   display:block;
   max-width: 100%;
 }
+
+img {
+    vertical-align: middle;}
 
 section.mapping img {
    max-width: none !important ;}
@@ -70,6 +60,10 @@ section.mapping img {
    padding: 0;}
 
 ul, li {  list-style-type: none; }
+
+p {
+    margin-bottom: 1.5em;
+}
 
 a { 
   color:$grey;
@@ -89,6 +83,7 @@ body {
 	font-size: 100%;
   line-height:1.5;
   font-family: Muli, 'Helvetica Neue', Arial,sans-serif;  
+  // font-family: Roboto, Helvetica, Arial, verdana, sans;
 	background: #222;
   overflow-x:hidden;
   font-weight: 300;
@@ -96,8 +91,7 @@ body {
 	// @include user-select( none );
 	@include touch-callout( none );
 	@include text-size-adjust( none );
-	color: $grey; 
-}
+	color: $grey; }
 
 
 

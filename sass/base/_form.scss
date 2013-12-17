@@ -1,12 +1,15 @@
 form {
+    text-align: left;
+    font-size: 12px;
     @include clearfix;
     margin-top: 2.5em;}
 
 fieldset {
     width: 100%;
-	border:none;}
+	  border:none;}
 
 label {
+    color: rgba(255,255,255, .65);
     display:none;}
 
 #{$all-text-inputs},
@@ -14,25 +17,33 @@ input[type="submit"],
 textarea { 
     width: 100%;
     outline:none;
-    @include transition ( all .18s linear );
+    border:0;
     font-size: 1em;
-    border:1px solid transparent;
+    text-transform: uppercase; letter-spacing: .25em;
+    box-shadow: 0 0 0 6px tramsparent;
+    background:darken($color-wrapper, 3%);
+    @include transition (all .25s linear );
+    border:1px solid darken($color-wrapper, 6%);
     margin: 0 0 em(50);
-    background:$white;
-    padding: 0.875em  1.125em;
-    // border:5px solid darken($color-wrapper, 4%);
-    // @include box-shadow(  0 0 1px 5px darken($color-wrapper,  1%));
-    color:$black;
-    @include placeholder { color: lighten($grey, 22%); font-weight: 700; font-style: italic; };
+    // @include box-shadow( 0 1px 1px rgba(255,255,255, .45));
+    padding: 1.5em  .25em;
+    color:darken($color-wrapper, 40%);
+    @include placeholder { color: darken($color-wrapper, 40%); text-transform: uppercase; letter-spacing: .25em;};
  }
+
+
+#{$all-text-inputs-hover}, textarea:hover,
+#{$all-text-inputs-focus}, textarea:focus { border-color: darken($color-wrapper, 12%); background: darken($color-wrapper, 7%); border-style: dashed; }
 
  input[type="submit"] {
     background:$red;
     cursor:pointer;
-    color:$white;
-    text-transform: uppercase;
     font-weight: 700;
-    padding: 1.125em 2.5em; 
+    color:$white;
+    border-radius:3px;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    padding: 1.25em 2.5em; 
    }
 
  textarea {
@@ -40,15 +51,6 @@ textarea {
    height: 250px;
 }
 
-
- #{$all-text-inputs-hover},
- #{$all-text-inputs-focus},
- textarea:hover,
- textarea:focus { 
-    border-color: darken($color-wrapper, 9%);
-    @include box-shadow(  0 0 1px 5px darken($color-wrapper,  3%));
-     outline:none;
-  }
 @include media( $tab ) {
     
     fieldset {
@@ -71,14 +73,30 @@ textarea {
 
 @include media( $desk ) {
    
-   label {
-     color:$red;
-     margin-bottom: .875em;
+   label,
+   input[type="submit"],
+   #{$all-text-inputs} {
+     font-size: 12px;
+     padding: 1.25em .25em;
+     text-transform: uppercase;
+     letter-spacing: .25em;
+     color:darken($color-wrapper, 40%);
      display: block;}
+
+   label {
+       margin-bottom: .5em;}
+
+   #{$all-text-inputs} { 
+       @include placeholder { @include hide-text;}  
+       margin-bottom: 1em;}
    
    input[type="submit"] {
+    color:$white;
+    float:left;
+    padding: .75em 1.25em;
     width: auto;}
 
 
 }
+
 

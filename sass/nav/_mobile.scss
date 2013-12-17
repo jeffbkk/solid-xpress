@@ -1,0 +1,107 @@
+/*-------------------------------------------------------------
+                        SHARE
+------------------------------------------------------------*/
+
+nav li a,
+ul.social a,
+ul.contact a {
+  padding:1.25em 2em;
+   &:hover,
+   &:hover:before {
+        color:$red;}
+}
+
+// nav li {
+//     position: relative;}
+
+nav li a,
+ul.contact a {
+   display:block;
+   padding:1.25em 2em;
+     &:hover,
+     &:hover:before {
+        color:$red;}
+    }
+
+
+
+
+/*------------------------------------------------------------ 
+                        HEADER
+-------------------------------------------------------------*/
+
+
+[role="banner"] {
+  padding: .75em 0;
+  height: 4.5em;
+  nav {
+    position: absolute;
+    top:0;
+    height: 100%;
+    z-index: -9;
+    width: 80%;
+    left:-80%;
+    min-height: 100%;
+    // li { position: relative;}
+    li a {
+      opacity:0;}
+      [data-icon]:before {
+      position: absolute;
+      top:em(12);}
+  }
+}
+
+#sub-menu-main {
+  opacity: 0;
+  height: 0;}
+
+
+
+#logo {
+  margin-right: 4%;
+  position: absolute;
+  right:0;
+  top:0;
+  a {
+     @include retina-image(logo-m, 72px, 75px );
+     background-repeat: no-repeat;
+     background-position: 100% 50%;
+     background-size: 65% auto; }
+}
+
+#toggle-wrapper {
+  position: absolute;
+  top:0;
+  padding: .5em 0 0 .5em;
+  left:0;
+  a#toggle {
+      @include size( 3.5em );
+      display:block;
+  }
+}
+
+
+
+/*--------------------------------------------------------------
+                           FOOTER
+----------------------------------------------------------------*/
+
+[role="contentinfo"] {
+    text-align: center;
+    
+    ul.social {
+      @include display-box;
+      width:150px;
+      margin:0 auto;
+      @include box-orient( horizontal );
+      
+      li {
+          @include box-flex( 8.0 );}
+      a {
+          position: relative;
+          @include hide-text;}
+    }   
+
+}
+
+

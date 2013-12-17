@@ -1,0 +1,15 @@
+{% for post in site.posts %}
+	       <li>
+	       {% if post.img == true %}
+	            <img src="/img/figure.jpg" alt="" class ="left-crop">
+	       {% endif %}
+	          <div class="info">
+	          	  <p class="meta">
+	          	   <time>{{ post.date | date_to_long_string }}</time>
+	             </p>
+	          	  <h1><a href="{{ post.url }}" title ="{{ post.title }}">{{ post.title }}</a></h1>
+	               
+	          </div>
+	         
+	       </li>   
+{% endfor %}

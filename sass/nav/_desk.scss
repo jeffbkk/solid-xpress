@@ -1,0 +1,183 @@
+/*------------------------------------------------------------ 
+                        HEADER
+-------------------------------------------------------------*/
+#sub-menu-main,
+#toggle,
+#sub-menu-side {
+	   display:none;}
+
+[role="banner"] {
+    overflow: visible;
+    background: transparent;
+    background: $bg;
+    #logo {
+        	width: 45%;
+        	float:left;
+        	a {
+            @include retina-image(logo-w, 500px, 88px );
+            background-position: 0% 50%;
+        		background-size: 60% auto !important;}
+    }
+
+    nav {
+      position: static;
+      margin-top: 1em;
+      float:right;
+      // vertical-align: middle;
+      // right:0%;
+
+      [data-icon]:before {
+    	  display:none;}
+
+      #main-menu > li {
+		    position: relative;
+		    display: inline;
+		    float:left;
+		      &:hover { background-color: #1D1D1D; }
+          &:nth-child(2):hover #sub-menu-main {
+             	 opacity:1;
+             	 top:46px;}
+
+          a { 
+             padding: .75em .5em ;
+             display: block; 
+             &:hover {
+                color:$red;}
+          }
+			  }
+     }
+}
+
+#sub-menu-main {
+    width: 240px;
+    // @include box-shadow( 0 10px 3px rgba(0,0,0, .35));
+	  position: absolute;
+	  top:-900%;
+	  opacity:0;
+	  z-index: 800;
+	  display:table-row;
+	  background:#222;
+	  background:#1D1D1D;
+    ul { 
+    	padding: 0 0;}
+	  a {
+		  padding-right: .5em;
+		  padding-left: .875em;
+		  &:hover {
+			  background-color: darken( $grey, 46%);
+		}
+	}
+}
+
+.test {
+   background: red;
+}
+
+/*--------------------------------------------------------------
+                           FOOTER
+----------------------------------------------------------------*/
+
+[role="contentinfo"] {
+    // border:24px solid darken($red, 15%);
+    border-top:0;
+    font-weight: 100;
+	  position: fixed;
+    bottom:0;
+    line-height: 1.5;
+    z-index:4;
+    background-size: 3px 3px;
+    @include background-image(linear-gradient( 0deg, rgba(0,0,0, 0) 0, darken($bg, 4%) 3px ), linear-gradient( 90deg, rgba(0,0,0,0) 0 ,  darken($bg, 4%)  3px ));
+    height: 601px;
+    left:0;
+    
+    .container {
+        padding-top: 145px;
+    }
+
+    .inner {
+       width: 100%;
+       position: absolute;
+       top:0;
+       left:0;
+       height: 100%;
+       background: url(/img/logo-footer.png) no-repeat;
+       background-size: 18% auto;
+       background-position: 18% 50%;}
+}
+
+ul.contact {
+    padding-right: 1.5em;
+    text-align: right;
+    border-right:1px solid rgba(255,255,255, .35);
+}
+
+ul.social {
+   text-align: left;
+   
+   li {
+      position: relative;
+      @include size( 46px );
+      @include inline-block;
+      margin: 0 14px 0 0;
+
+      a:hover:before {
+          color:$red;
+      }
+
+      a:hover i {
+          opacity:1;
+          z-index: 4;
+          top:-80px;
+      }
+   }
+ }
+
+ul.social a i {
+     display:block;
+     content:attr(title);
+     display: block;
+     @include transition ( all .35s ease-in-out );
+     font-family: Source Sans pro, Helvetica, Verdana, sans;
+     font-style: normal;
+     position: absolute;
+     top:-56px;
+     opacity:0;
+     z-index: -4;
+     background: $red;
+     border-radius:3px;
+     color:$bg;
+     margin-left: -4px;
+     font-weight: 700;
+     text-align: center;
+     padding: 1.25em;
+     font-size: 15px;
+     left: -50%;
+
+     &:after {
+        @include triangle( 14px, $red, down );
+        left:50%;
+        margin-left: -7px;
+        display: inline-block;
+        content:'';
+        top:37px;
+        position: absolute;}
+  }
+
+@media screen and (min-width:1108px) {
+
+     [role="banner"] {
+          
+          nav #main-menu > li a {
+               padding: .75em 1.125em ; display: block;} 
+
+     }
+
+}
+  
+
+#test {
+  width: 100%;
+  height: 400px;
+  // background: blue;
+  position: relative;
+  margin: 1.5em 0;}

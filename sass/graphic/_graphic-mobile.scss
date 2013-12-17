@@ -9,24 +9,15 @@
 nav li {
 	  border-bottom:1px solid darken($grey, 43%);
       a {
-      	  border-left:4px solid transparent;
-      	  &:hover {
-      	  	 border-color:$red;}
-
+      	  
       	  &[data-icon]:before {
               font-size: em(30);
               top:50%;
+              z-index: -4;
               margin-top: -11px;
               right:12%;
           }
       }
 }
 
-[data-icon]:before {
-        position: absolute;
-        content:attr(data-icon);
-        display: block;
-        top:0;
-        font-family: entypo;
-        font-size: 36px;
-        color:darken($grey, 42%);}
+

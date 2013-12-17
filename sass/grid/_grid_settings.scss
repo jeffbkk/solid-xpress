@@ -2,7 +2,7 @@
 @import "neat/neat-helpers";
 
 $visual-grid:true;
-$visual-grid-color:rgb(0,255,255);
+$visual-grid-color:rgba(0,255,255, .35);
 $visual-grid-index:back;
 
 $border-box-sizing:true;
@@ -10,7 +10,7 @@ $border-box-sizing:true;
 $column:75;
 $gutter:40;
 $grid-columns:4;
-$max-width:em(1225);
+// $max-width:em(1225);
 
 // Bourbon is watch Neat
 
@@ -18,7 +18,7 @@ $fg-columns:$grid-columns;
 $fg-gutter:$gutter;
 $fg-column:$column;
 
-
 $mobile:new-breakpoint( min-width 320px 4);
+$mobile-second:new-breakpoint( min-width 580px 4);
 $tab: new-breakpoint( min-width 760px 8 );
 $desk: new-breakpoint(min-width 860px 12);

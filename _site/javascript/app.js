@@ -2,22 +2,13 @@
 $(document).ready(function() {
 
 	  var toggle = $('#toggle'),
+        nav = $('nav'),
 	      wrapper = $('#wrapper, footer'),
         header = $('header[role="banner"]'),
-        h = header.height(),
-        // subToggleMain = $('#main-menu').children('li').next('li:nth-child(1)').children('a:nth-child(1)');
         subToggleMain = $('#main-menu > li:nth-child(2) > a:nth-child(1)'),
-        subToggleSide = $('#side-menu > li:nth-child(2) > a:nth-child(1)'),
-        subNavMain = $('#sub-menu-main'),
-        h = subNavMain.height(),
-        subNavSide = $('#sub-menu-side');
+        subNavMain = $('#sub-menu-main');
         subToggleMain.attr('data-icon', '\uE75C');      
         
-        console.log(h);
-
-        
-        console.log(h);
-
         toggle.bind('click', function(event) {
           if (wrapper.hasClass('open-nav')) { 
              
@@ -31,12 +22,30 @@ $(document).ready(function() {
 
         subToggleMain.bind('click', function(event) {
               subNavMain.toggleClass('open');
+
               return false;
         });
 
-        subToggleSide.bind('click', function(event) {
-              subNavSide.toggleClass('open');
-              return false;
+
+        var h = $(window).height();
+
+        var test = $('section.test');
+        
+        // 943px 
+        
+        // scroll = 200px;
+
+        // 660px
+        
+        $(window).scroll(function(){
+           offset = $(test).offset().top;
+           console.log($(window).scrollTop());
+           console.log(offset);
+
+
         });
+
+
+        
 
 });

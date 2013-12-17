@@ -27,13 +27,6 @@
   <body>
   <div id="wrapper">
     <header role="banner" id ="main-header">
-     <div id ="call-to-action">
-        <div class="container">
-           <p>
-              Appelez nous <a href="tel:0950250050" data-icon ="&#128241;">09 50 25 00 50</a>
-          </p>
-        </div>
-     </div>
       
       <div class="container">
         
@@ -49,7 +42,7 @@
          <nav  >
            <ul id="main-menu" class="menu level-1">
   <li>
-    <a title = " " href="/">Home</a>
+    <a title = " " href="/">Accueil</a>
   </li>
   <li>
     <a title = " services " href="/services/">Services</a>
@@ -69,7 +62,7 @@
     <a title = " " href="/gallerie">Gallerie</a>
   </li>
   <li>
-    <a title = " " href="/a-propos">A propos</a>
+    <a title = " " href="/faq">Faq</a>
   </li>
   <li>
     <a title = " " href="/contact">Contact</a>
@@ -94,88 +87,54 @@
        <div id="mask"></div>
 
        <footer role ="contentinfo">
-   
-         <div class="container"> 
-   
-            <div class="grid-6 mb">
-               <nav>
-                 <ul id="side-menu" class="menu level-1">
-  <li>
-    <a title = " " href="/">Home</a>
-  </li>
-  <li>
-    <a title = " services " href="/services/">Services</a>
-  <div id="sub-menu-side"><ul class="menu sub-menu level-2">
-    <li>
-      <a title = " services" href="/services/prototypage-rapide">Prototypage rapide</a>
-    </li>
-    <li>
-      <a title = " services" href="/services/scan-3d">Scan 3d</a>
-    </li>
-    <li>
-      <a title = " services" href="/services/fraisage-numerique">Fraisage numerique</a>
-    </li>
-  </ul></div>
-  </li>
-  <li>
-    <a title = " " href="/gallerie">Gallerie</a>
-  </li>
-  <li>
-    <a title = " " href="/a-propos">A propos</a>
-  </li>
-  <li>
-    <a title = " " href="/contact">Contact</a>
-  </li>
-  <li>
-    <a title = " " href="/blog">blog</a>
-  </li>
-</ul>
+          <div class="inner">
 
-               </nav>
-            </div>
-
-            <div class="grid-3 mb">
-
-              <ul class="contact">
-                 <li><a href="tel:09 50 25 00" >09 50 25 00 </a></li>
-                 <li><a href="mailto:contact@solidexpress.com">contact@solidexpress.com</a></li>
-              </ul>
-
-            </div>
-   
-            <div class="grid-3 box mb">
-                 
-                 <ul class="social">
-                   
-                        <li>
-                           <a href="http://facebook.com?" data-aria ="hidden" data-icon ="&#62221;" title =Facebook>Facebook</a>
-                        </li>
-                   
-                        <li>
-                           <a href="http://linkedin.com?" data-aria ="hidden" data-icon ="&#62233;" title =linkedin>linkedin</a>
-                        </li>
-                   
-                        <li>
-                           <a href="http://pinterest.com?" data-aria ="hidden" data-icon ="&#62227;" title =pinterest>pinterest</a>
-                        </li>
-                   
-                 </ul>
-            </div>
-   
-        </div>
-
-
-        <div class="container">
           
-          <div class="grid-12">
-            
-            <p class ="credit">
-              &copy; 2013 - <a href ="http://localhost:4000" title ="">SolidXPress</a> - <br> Powered by <a class ="external" href ="http://jekyllrb.com/">Jekyll</a> -  Design by <a class ="external" href="#">Jeff</a> 
-            </p>
+   
+                 <div class="container"> 
 
-          </div>
+                   <ul class="contact grid-6">
+                      <li><a href="mailto:contact@solidexpress.com">contact@solidexpress.com</a></li>
+                      <li><a href="tel:09 50 25 00" >09 50 25 00 </a></li>
+                      <li><a href="tel:09 50 25 00" >09 50 25 00 </a></li>
+                   </ul>
+                   
+                    <ul class="social grid-6">
+                       
+                            <li>
+                               <a href="http://facebook.com?" data-aria ="hidden" data-icon ="&#62221;" title =Facebook>
+                                     Facebook 
+                                     <i>Facebook</i>
+                               </a>
+                            </li>
+                       
+                            <li>
+                               <a href="http://linkedin.com?" data-aria ="hidden" data-icon ="&#62233;" title =linkedin>
+                                     linkedin 
+                                     <i>Linkedin</i>
+                               </a>
+                            </li>
+                       
+                            <li>
+                               <a href="http://pinterest.com?" data-aria ="hidden" data-icon ="&#62227;" title =pinterest>
+                                     pinterest 
+                                     <i>Pinterest</i>
+                               </a>
+                            </li>
+                       
+                     </ul>
 
-        </div>
+                 </div>
+
+                 <div id="test">
+                      
+                      <span class="particle-1 particle">testing</span>
+                      <span class="particle-2 particle">testing</span>
+                      <span class="particle-3 particle">testing</span>
+
+                 </div>
+
+           </div>
         	
        </footer>
    
@@ -183,7 +142,7 @@
     
 
     
-    <script src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.0rc1/zepto.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.0/zepto.min.js"></script>
         
     <script>
         //    document.write('<script src=' +
@@ -192,6 +151,8 @@
         // </script>
     <script src="/javascript/picturefill.js"></script>
     <script src="/javascript/app.js"></script>
+    <script>document.write('<script src="http://' + (location.host || 'localhost')
+.split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
   
   </body>
 </html>

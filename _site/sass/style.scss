@@ -7,22 +7,24 @@
 @import "modules/animate";
 @import "graphic/design";
 @import "base/base";
+@import "base/typo";
 @import "base/grid";
 @import "base/form";
-@import "layout/blog";
+@import "base/faq";
+@import "modules/slideshow";
 
 
 @media screen and (min-width:1px) and (max-width: 759px) {
-    @import "layout/mobile";
+    @import "nav/mobile";
 	@import "graphic/graphic-mobile";
 }
 
 @media screen and (min-width:760px) and (max-width: 859px) {
-    @import "layout/tab";
+    @import "nav/tab";
 }
 
 @media screen and (min-width:860px) {
-	@import "layout/desk";
+	@import "nav/desk";
 }
 
 
