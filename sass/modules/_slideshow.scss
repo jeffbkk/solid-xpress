@@ -53,10 +53,11 @@ section#slideshow {
 
 	 section#slideshow {
 	 	  background: url(../img/test2-s.jpg);
-	 	  background-position: 68% 0;
+	 	  background-position: 68% auto;
 	 	  background-repeat: no-repeat;
 	 	  background-size: 100% auto;
 	 	  min-height:none;
+	 	  padding-bottom: 0;
 	 	  padding-top: 28.4%;
 	 }
 

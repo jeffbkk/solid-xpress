@@ -2,6 +2,7 @@
 @import url(http://weloveiconfonts.com/api/?family=entypo);
 @import url(http://fonts.googleapis.com/css?family=Muli:300,400,300italic,400italic);
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,100italic);
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -651,7 +652,10 @@ nav li a,
 ul.social a,
 ul.contact a {
   font-family: Muli, 'Helvetica Neue', Arial,sans-serif;
-  text-transform: capitalize; }
+  font-family: Montserrat, 'Helvetica Neue', Arial,sans-serif;
+  font-size: 0.6875em;
+  letter-spacing: 0.25em;
+  text-transform: uppercase; }
 
 ul.contact a {
   text-transform: uppercase;
@@ -668,30 +672,13 @@ ul.contact a {
   box-shadow: -3px 0 8px black, 3px 0 8px black; }
 
 [role="banner"] {
-  background: #222222;
+  background: #e8e8e8;
   color: #999999; }
 
 footer {
   color: white;
   text-shadow: 0 -1px 0 #680410;
   background: #222222; }
-  footer:before {
-    position: absolute;
-    right: -5%;
-    top: 15%;
-    content: '';
-    z-index: 80;
-    width: 800px;
-    height: 600px;
-    display: block;
-    background: url(../img/type-footer.png) no-repeat;
-    background-size: 100% auto;
-    opacity: .025;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg); }
   footer a {
     color: white; }
   footer .container {
@@ -1235,10 +1222,11 @@ section#slideshow {
 @media screen and (min-width: 860px) {
   section#slideshow {
     background: url(../img/test2-s.jpg);
-    background-position: 68% 0;
+    background-position: 68% auto;
     background-repeat: no-repeat;
     background-size: 100% auto;
     min-height: none;
+    padding-bottom: 0;
     padding-top: 28.4%; }
 
   .shadow {
@@ -1291,6 +1279,11 @@ section#slideshow {
       left: -80%;
       min-height: 100%; }
       [role="banner"] nav li a {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-family: Montserrat, sans;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 0.875em;
         opacity: 0; }
       [role="banner"] nav [data-icon]:before {
         position: absolute;
@@ -1347,10 +1340,11 @@ section#slideshow {
         text-shadow: none; }
 
   #toggle {
-    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJZb3VyX0ljb24iIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTAwcHgiIGhlaWdodD0iMTAwcHgiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMDAgMTAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8cGF0aCBmaWxsID0iI0ZGRkZGRiIgZD0iTTgzLjgyNyw0NS44NjhIMTYuMTczYy0yLjI4MiwwLTQuMTMyLDEuODUtNC4xMzIsNC4xMzJzMS44NSw0LjEzMiw0LjEzMiw0LjEzMmg2Ny42NTVjMi4yODIsMCw0LjEzMi0xLjg1LDQuMTMyLTQuMTMyICAgUzg2LjExLDQ1Ljg2OCw4My44MjcsNDUuODY4eiIvPgoJPHBhdGggZmlsbCA9IiNGRkZGRkYiIGQ9Ik04My44MjcsNzEuMjM5SDE2LjE3M2MtMi4yODIsMC00LjEzMiwxLjg1LTQuMTMyLDQuMTMyczEuODUsNC4xMzIsNC4xMzIsNC4xMzJoNjcuNjU1YzIuMjgyLDAsNC4xMzItMS44NSw0LjEzMi00LjEzMiAgIFM4Ni4xMSw3MS4yMzksODMuODI3LDcxLjIzOXoiLz4KCTxwYXRoIGZpbGwgPSIjRkZGRkZGIiBkPSJNMTYuMTczLDI4Ljc2MWg2Ny42NTVjMi4yODIsMCw0LjEzMi0xLjg1LDQuMTMyLTQuMTMycy0xLjg1LTQuMTMyLTQuMTMyLTQuMTMySDE2LjE3M2MtMi4yODIsMC00LjEzMiwxLjg1LTQuMTMyLDQuMTMyICAgUzEzLjg5LDI4Ljc2MSwxNi4xNzMsMjguNzYxeiIvPgo8L2c+Cjwvc3ZnPg==);
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGJhc2VQcm9maWxlPSJ0aW55IiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjEwMHB4IiBoZWlnaHQ9IjEwMHB4IiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnIGlkPSJDYXB0aW9ucyI+CjwvZz4KPGcgaWQ9IllvdXJfSWNvbiI+Cgk8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiMyMjIyMjIiIGQ9Ik04OCwyOXYtMmMwLTIuOTM5LTAuOTYxLTQtNC00SDE2Yy0zLjA2MSwwLTQsMS4wMzktNCw0djJjMCwzLjEsMS4wMzksNCw0LDRoNjggICBDODcsMzMsODgsMzIuMDM5LDg4LDI5eiBNODgsNTF2LTJjMC0yLjkzOS0wLjk2MS00LTQtNEgxNmMtMy4wNjEsMC00LDEuMDM5LTQsNHYyYzAsMy4xLDEuMDM5LDQsNCw0aDY4Qzg3LDU1LDg4LDU0LjAzOSw4OCw1MXogICAgTTg4LDczdi0yYzAtMi45MzktMC45NjEtNC00LTRIMTZjLTMuMDYxLDAtNCwxLjAzOS00LDR2MmMwLDMuMSwxLjAzOSw0LDQsNGg2OEM4Nyw3Nyw4OCw3Ni4wMzksODgsNzN6Ii8+CjwvZz4KPC9zdmc+);
     background-position: 50% 50%;
+    opacity: .35;
     background-repeat: no-repeat;
-    background-size: 80% auto; }
+    background-size: 85% auto; }
 
   nav li {
     border-bottom: 1px solid #2b2b2b; }
@@ -1399,9 +1393,7 @@ section#slideshow {
     display: none; }
 
   [role="banner"] {
-    overflow: visible;
-    background: transparent;
-    background: #222222; }
+    overflow: visible; }
     [role="banner"] #logo {
       width: 45%;
       float: left; }
@@ -1410,7 +1402,7 @@ section#slideshow {
         height: 88px;
         width: 500px;
         background-position: 0% 50%;
-        background-size: 60% auto !important; }
+        background-size: 70% auto; }
     [role="banner"] nav {
       position: static;
       margin-top: 1em;
@@ -1421,14 +1413,13 @@ section#slideshow {
         position: relative;
         display: inline;
         float: left; }
-        [role="banner"] nav #main-menu > li:hover {
-          background-color: #1D1D1D; }
         [role="banner"] nav #main-menu > li:nth-child(2):hover #sub-menu-main {
           opacity: 1;
           top: 46px; }
         [role="banner"] nav #main-menu > li a {
           padding: 0.75em 0.5em;
-          display: block; }
+          display: block;
+          color: #222222; }
           [role="banner"] nav #main-menu > li a:hover {
             color: #e30922; }
 
@@ -1549,6 +1540,8 @@ section#slideshow {
           background-image: url(logo-w-2x.png);
           background-size: 500px 88px; } }
 @media screen and (min-width: 860px) and (min-width: 1108px) {
-  [role="banner"] nav #main-menu > li a {
-    padding: 0.75em 1.125em;
-    display: block; } }
+  [role="banner"] {
+    left: 0; }
+    [role="banner"] nav #main-menu > li a {
+      padding: 0.75em 1.125em;
+      display: block; } }

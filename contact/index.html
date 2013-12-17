@@ -9,10 +9,6 @@ location:
   longitude: 2.924794
 ---
 
-{% if page.option == true %}
-  {% include title-page.html %}
-{% endif %}
-
 <!-- <section class ="mapping">
 	<div class ="map-canvas" id ="map-event"></div>
 
@@ -23,49 +19,11 @@ location:
 
 </section> -->
 
-<section class="title-page">
-	<div class="container">
-	   <div class="grid-12">
-		  <h1>Contact</h1>
-	  </div>
-	</div>
-</section>
+{% include title.html %}
 
-<section class ="section-title">
+<section>
 	<div class="container">
 
-		<aside class="grid-5">
-			<h2>adresse</h2>
-			
-
-			<div class="vcard">
-				<address>
-				    <strong class="fn org">Solidxpress</strong><br>
-				    <ul>
-				         <li class="street-address">9 Avenue Georges Clemenceau</li>
-				         <li class="postal-code">58200</li>
-				         <li class="locality">Cosnes-Cour/Loire</li>
-				         <li class="email"><a href="mailto:webmaster@example.com">contact@solidxpress.com</a></li>
-				         <li class="tel"><a href="tel:09 50 25 00 50">  09 50 25 00 50</a></li>
-				    	 
-				    </ul>
-                  
-              </address>
-			</div>
-
-			<div class="mapping">
-
-
-	         <div class ="map-canvas" id ="map-event"></div>
-
-	              <div class ="map-point" address ="{{ page.location.address }}" lat ="{{ page.location.latitude }}" long ="{{ page.location.longitude }}">
-	              <div class ="description"><b>{{ site.name }}</b></div>
-	              <div class "mapping-adress"> {{ page.location.address }}</div>
-	         </div>
-				
-			</div>
-
-		</aside>
    	     
    	     <div class="grid-7">
 			<h2>Formulaire de contact</h2>
@@ -96,6 +54,25 @@ location:
 				<input type="submit" value="Envoyer">
 			</form>
 		</div>
+
+		<aside class="grid-4-shift-1">
+			
+			<div class="vcard">
+				<address>
+				    <strong class="fn org">Solidxpress</strong><br>
+				    <ul>
+				         <li date-icon ="" class="street-address">9 Avenue Georges Clemenceau</li>
+				         <li date-icon ="" class="postal-code">58200</li>
+				         <li date-icon ="" class="locality">Cosnes-Cour/Loire</li>
+				         <li date-icon ="" class="email"><a href="mailto:webmaster@example.com">contact@solidxpress.com</a></li>
+				         <li date-icon ="" class="tel"><a href="tel:09 50 25 00 50">  09 50 25 00 50</a></li>
+				    	 
+				    </ul>
+                  
+              </address>
+			</div>
+
+		</aside>
 
 
    </div>

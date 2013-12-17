@@ -45,6 +45,9 @@ $(document).ready(function() {
 
         });
 
+        var hg = $('[role="banner').height();
+        console.log(hg);
+
 
         
 

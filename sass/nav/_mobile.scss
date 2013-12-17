@@ -42,8 +42,12 @@ ul.contact a {
     width: 80%;
     left:-80%;
     min-height: 100%;
-    // li { position: relative;}
     li a {
+      font-family: $helvetica;
+      font-family: Montserrat, sans;
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: em(14);
       opacity:0;}
       [data-icon]:before {
       position: absolute;
